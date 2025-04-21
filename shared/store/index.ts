@@ -2,10 +2,10 @@ import axios from 'axios'
 import { create } from 'zustand'
 import { devtools } from 'zustand/middleware'
 
-// type PostType = {
-// 	title: string
-// 	body: string
-// }
+export type PostType = {
+	title: string
+	body: string
+}
 
 interface NavagationState {
 	activeNav: number
@@ -14,10 +14,10 @@ interface NavagationState {
 
 interface UsersState {
 	posts: []
-	// post: PostType[]
+	post: PostType | null
 	searchValue: string
 	getAllPosts: (searchValue: string) => void
-	// getPost: (id: number) => void
+	getPost: (id: number) => void
 	setSearchValue: (value: string) => void
 }
 
@@ -42,15 +42,15 @@ export const usePosts = create<UsersState>()(
 			}
 		},
 		setSearchValue: value => set({ searchValue: value }),
-		// getPost: async id => {
-		// 	const { data } = await axios.get(
-		// 		`https://jsonplaceholder.typicode.com/posts/${id}`
-		// 	)
-		// 	try {
-		// 		set({ post: data })
-		// 	} catch {
-		// 		set({ post: [] })
-		// 	}
-		// },
+		getPost: async id => {
+			const { data } = await axios.get(
+				`https://jsonplaceholder.typicode.com/posts/${id}`
+			)
+			try {
+				set({ post: data })
+			} catch {
+				set({ post: null })
+			}
+		},
 	}))
 )
