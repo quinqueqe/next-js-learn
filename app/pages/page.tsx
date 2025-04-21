@@ -1,6 +1,8 @@
 import React from 'react'
 
 import type { Metadata } from 'next'
+import UsersList from '@/shared/compontents/PostsList'
+import SearchUser from '@/shared/compontents/SearchUser'
 
 export const metadata: Metadata = {
 	title: 'Pages page',
@@ -8,7 +10,12 @@ export const metadata: Metadata = {
 }
 
 const Pages = () => {
-	return <p>Pages page</p>
+	return (
+		<>
+			<SearchUser />
+			<UsersList />
+		</>
+	)
 }
 
 export default Pages
