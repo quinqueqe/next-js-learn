@@ -9,11 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.1.4",
     "axios": "^1.8.4",
     "next": "15.3.1",
+    "postcss": "^8.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sass": "^1.86.3",
+    "tailwindcss": "^4.1.4",
     "zustand": "^5.0.3"
   },
   "devDependencies": {

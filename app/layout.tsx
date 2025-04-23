@@ -1,5 +1,6 @@
 import Header from '@/shared/compontents/Header'
 import './globals.scss'
+import './globals.css'
 import Footer from '@/shared/compontents/Footer'
 import type { Metadata } from 'next'
 

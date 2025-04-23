@@ -7,9 +7,7 @@ export const metadata: Metadata = {
 }
 
 const OurOffer = () => {
-  return (
-<p>Our Offer</p>
-  )
+	return <p>Our Offer</p>
 }
 
 export default OurOffer

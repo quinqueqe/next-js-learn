@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 // nullstyles
 * {
 	padding: 0;
@@ -87,4 +89,9 @@ button {
 		font-size: 30px;
 	}
 	padding-bottom: 350px;
+}
+
+input {
+	border: 1px solid white;
+	color: white;
 }
